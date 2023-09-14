@@ -1,0 +1,18 @@
+git log - to log all the commits of current branch  
+git log --oneline
+git rebase -i HEAD~2
+git rebase --abort : to abort the rebase in process
+git reset "commitId" : just remove commit and staging data - we can stage and commit again - it just undos the commit, changes remain as it is
+git reset "commitId" --hard : jumps to the commit with commitId and there is no going back from here
+git merge newbranch : to merge branch into current branch
+git reset "commitId" --hard : undo merging
+
+Revert:
+git revert "commitId" : to revert the particular commit - it will one more commit and revert
+:wq : write and quit for vim
+
+Squash:
+- checkout the main branch 
+- git merge newbranch --squash 
+- git status
+- git commit -m "squashed commits"
